@@ -9,5 +9,7 @@ const api = axios.create({
 
 export const getTodos = async (): Promise<TodosResponse> => {
   const response = await api.get<TodosResponse>('/todos');
+  console.log(response.data);
+  
   return response.data;
 };
